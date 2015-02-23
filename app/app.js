@@ -1,3 +1,6 @@
+(function(){
+
+
 var app = angular.module('myapp', []);
 app.controller('StoreListing', function() {
 	this.products = phones;
@@ -19,3 +22,5 @@ var phones = [{
 		available:9
 	}
 ];
+
+})();
