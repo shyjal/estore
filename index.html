@@ -15,56 +15,16 @@
 
 <body>
 
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-				<a class="navbar-brand" href="#">e-Store</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a>
-					</li>
-					<li><a href="#contact">Contact</a>
-					</li>
-
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</nav>
+	<header></header>
 
 	<div class="container flex" ng-controller="StoreListing as store">
 
-		<div class="starter-template">
-		
+		<single-product class="col-sm-6 col-md-4 center-block" style="text-align:center;" ng-repeat="product in store.products"></single-product>
 
-			<div class="col-sm-6 col-md-4 center-block" style="text-align:center;" ng-repeat="product in store.products">
-
-				<h1>{{product.name|uppercase}}</h1>
-				
-				<img ng-src='{{product.image}}' class="img-thumbnail center-block" ></img>
-
-				<h2>{{product.price|currency}}</h2>
-				<button class="btn btn-lg btn-success center-block" ng-disabled="product.available<=0">Buy</button>
-
-			</div>
-
-		</div>
 
 	</div>
 
-	<footer class="footer">
-		<div class="container">
-			<p class="text-muted">© 2015 e-Store</p>
-		</div>
-	</footer>
+	<footer></footer>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

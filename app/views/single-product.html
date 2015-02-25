@@ -1,0 +1,6 @@
+<h1>{{product.name|uppercase}}</h1>
+
+<img ng-src='{{product.image}}' class="img-thumbnail center-block"></img>
+
+<h2>{{product.price|currency}}</h2>
+<button class="btn btn-lg btn-success center-block" ng-disabled="product.available<=0">Buy</button>
